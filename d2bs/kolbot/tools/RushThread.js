@@ -110,7 +110,7 @@ function main() {
 
 		Pather.makePortal();
 		Attack.securePosition(me.x, me.y, 40, 3000, true);
-		say("1");
+		say("TP to Andy Up. Come quickly");
 
 		while (!this.playerIn()) {
 			Pather.moveTo(22582, 9612);
@@ -118,7 +118,7 @@ function main() {
 		}
 
 		Attack.kill(156);
-		say("2");
+		say("Killed. Go To Town");
 		Pather.moveTo(22582, 9612);
 
 		while (this.playerIn()) {
@@ -146,9 +146,9 @@ function main() {
 				throw new Error("cube failed");
 			}
 
-			Pather.makePortal();
 			Attack.securePosition(me.x, me.y, 30, 3000, true);
-			say("1");
+			Pather.makePortal();
+			say("TP to Cube Up");
 
 			while (!this.playerIn()) {
 				delay(100);
@@ -174,15 +174,16 @@ function main() {
 			throw new Error("amulet failed");
 		}
 
-		Pather.makePortal();
+		//Pather.makePortal();
 
 		if (me.diff < 2) {
 			Attack.securePosition(me.x, me.y, 25, 3000);
 		} else {
 			Attack.securePosition(me.x, me.y, 25, 3000, true, true);
 		}
-
-		say("1");
+		
+		Pather.makePortal();
+		say("TP to Ammy Up");
 
 		while (!this.playerIn()) {
 			delay(100);
@@ -207,9 +208,10 @@ function main() {
 			throw new Error("staff failed");
 		}
 
-		Pather.makePortal();
+		//Pather.makePortal();
 		Attack.securePosition(me.x, me.y, 30, 3000, true);
-		say("1");
+		Pather.makePortal();
+		say("TP to Staff Up");
 
 		while (!this.playerIn()) {
 			//Pather.moveToPreset(me.area, 2, 356);
@@ -266,7 +268,7 @@ function main() {
 
 		Pather.makePortal();
 		Attack.securePosition(me.x, me.y, 25, 3000);
-		say("1");
+		say("TP to Summoner up, Come quickly.");
 
 		while (!this.playerIn()) {
 			Pather.moveToUnit(spot);
@@ -276,7 +278,7 @@ function main() {
 
 		Pather.moveToPreset(me.area, 2, 357);
 		Attack.kill(250);
-		say("2");
+		say("Killing Summoner");
 
 		while (this.playerIn()) {
 			delay(100);
@@ -322,13 +324,13 @@ function main() {
 
 		Pather.makePortal();
 		Attack.securePosition(me.x, me.y, 30, 3000, true, me.diff === 2);
-		say("1");
+		say("TP to Duriel ready. Insert the staff.");
 
 		while (!this.playerIn()) {
 			//Pather.moveToPreset(me.area, 2, 152, 0, -5);
 			delay(100);
 		}
-
+		say("Inter the tunnel and then I will follow. If you die, stay dead until the boss dies.");
 		while (this.playerIn()) {
 			delay(100);
 		}
@@ -350,7 +352,7 @@ function main() {
 		Pather.moveTo(22577, 15649, 10);
 		Pather.moveTo(22577, 15609, 10);
 		Pather.makePortal();
-		say("1");
+		say("complete. Dont forget to Talk to Tyrael. Making TP to palace so you can talk to Jerhyn. Will wait for 15 seconds.");
 
 		while (!this.playerIn()) {
 			delay(100);
@@ -384,8 +386,9 @@ function main() {
 
 		Pather.moveTo(coords[0] + 23, coords[1] - 102);
 		Pather.makePortal();
+		say("Safe TP up. stay here. Dont go to town yet");
 		Attack.securePosition(me.x, me.y, 40, 3000);
-		say("1");
+
 
 		while (!this.playerIn()) {
 			delay(250);
@@ -400,7 +403,7 @@ function main() {
 		Attack.kill(getLocaleString(2862));
 		Attack.kill(getLocaleString(2860));*/
 
-		say("2");
+		say("Killed. go to town");
 		Pather.moveTo(coords[0] + 23, coords[1] - 102);
 		Pather.usePortal(null, me.name);
 
@@ -418,8 +421,8 @@ function main() {
 		Pather.moveToExit(102, true);
 		Pather.moveTo(17692, 8023);
 		Pather.makePortal();
-		delay(2000);
-		say("1");
+		delay(1000);
+		say("TP is up, dangerous. Stand here until I say so. I'll make a new TP at Act4 portal when he is dead.");
 
 		while (!this.playerIn()) {
 			delay(250);
@@ -430,7 +433,7 @@ function main() {
 		Pickit.pickItems();
 		Pather.moveTo(17692, 8023);
 		Pather.makePortal();
-		say("2");
+		say("Killed. go to town and wait for my next TP for the Act4 portal");
 
 		while (this.playerIn()) {
 			delay(250);
@@ -451,7 +454,7 @@ function main() {
 
 		Pather.makePortal();
 		Pather.moveTo(17581, 8070);
-		say("1");
+		say("Safe TP to Act4 portal Up Now. Take my new TP");
 
 		while (!this.playerIn()) {
 			delay(250);
@@ -464,7 +467,7 @@ function main() {
 			delay(250);
 		}
 
-		delay(2000);
+		delay(1000);
 		Pather.usePortal(null);
 
 		return true;
@@ -640,7 +643,7 @@ function main() {
 		Pather.moveTo(7763, 5267);
 		Pather.makePortal();
 		Pather.moveTo(7727, 5267);
-		say("1");
+		say("All Seals Opened. TP for diablo ready");
 
 		while (!this.playerIn()) {
 			delay(250);
@@ -653,7 +656,7 @@ function main() {
 		}
 
 		Attack.kill(243);
-		say("2");
+		say("Killed. Go to act5");
 
 		if (me.gametype > 0) {
 			say("a5");
@@ -673,13 +676,16 @@ function main() {
 	};
 
 	this.ancients = function () {
+		
+		/*
 		if (me.diff === 2) {
-			say("Hell rush complete~");
+			say("rush complete~");
 			delay(500);
 			quit();
 
 			return false;
 		}
+		*/
 
 		if (!this.bumperCheck()) {
 			say("No eligible bumpers detected. Rush complete~");
@@ -743,7 +749,7 @@ function main() {
 	};
 
 	this.baal = function () {
-		say("starting baal");
+		say("starting baal. Clearing throne alone.");
 
 		var tick, portal;
 
@@ -1005,7 +1011,106 @@ MainLoop:
 		say("Done clearing area: " + area);
 	};
 
+	
+	
+	
 	// Quests
+	// Quests
+	// Quests
+	
+	
+	
+
+	
+	
+	this.cain = function () {
+	var tree, scroll, akara, stones, gibbet;
+	
+		if (!Config.Rusher.cain) {
+			return false;
+		}
+
+		say("starting cain");
+		
+		if (!Town.goToTown() || !Pather.useWaypoint(5, true)) {
+			throw new Error("Cain quest failed");
+		}
+		
+		if (!Pather.moveToPreset(me.area, 2, 30, 5, 5)) {
+				throw new Error("Failed to move to Tree of Inifuss");
+		}
+		
+		Attack.securePosition(me.x, me.y, 30, 3000);
+		Pather.makePortal();
+		say("TP for Tree Scroll");
+
+		while (!this.playerIn()) {
+			delay(200);
+		}
+		
+		Town.goToTown();
+		Town.doChores();
+		say("speak to akara and open scroll");
+		delay(2000);
+		Pather.useWaypoint(4);
+
+		if (!Pather.moveToPreset(me.area, 1, 737, 0, 0, false, true)) {
+			throw new Error("Failed to move to Rakanishu");
+		}
+		Attack.clear(15, 0, getLocaleString(2872)); // Rakanishu
+		Attack.securePosition(me.x, me.y, 30, 3000);
+		Pather.makePortal();
+		say("TP for Stones up");
+		
+		while (!this.playerIn()) {
+			delay(200);
+		}
+		
+		say("Touch the stones");
+		delay(4000);
+		
+		while (!Pather.usePortal(38)) {
+			Attack.securePosition(me.x, me.y, 10, 3000);
+		}
+		Pather.moveTo(me.x, me.y + 6);
+		
+	gibbet = getUnit(2, 26);
+
+		if (!gibbet.mode) {
+			if (!Pather.moveToPreset(me.area, 2, 26, 0, 0, true, true)) {
+				throw new Error("Failed to move to Cain's Gibbet");
+			}
+
+			Misc.openChest(gibbet);
+		}
+		Attack.securePosition(me.x, me.y, 10, 3000);
+		Pather.makePortal();
+		say("TP for cain");
+		
+		while (!this.playerIn()) {
+			delay(200);
+		}
+
+		Pather.usePortal(null, null);
+
+		return true;
+	};
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	this.radament = function () {
 		if (!Config.Rusher.Radament) {
 			return false;
@@ -1076,7 +1181,7 @@ MainLoop:
 
 		Attack.securePosition(me.x, me.y, 35, 3000);
 		Pather.makePortal();
-		say("1");
+		say("radament portal");
 
 		while (!this.playerIn()) {
 			delay(200);
@@ -1137,7 +1242,7 @@ MainLoop:
 
 		Attack.securePosition(me.x, me.y, 30, 2000);
 		Pather.makePortal();
-		say("1");
+		say("Lam Essen TP up");
 
 		while (!this.playerIn()) {
 			delay(200);
@@ -1227,7 +1332,7 @@ MainLoop:
 
 		Attack.securePosition(me.x, me.y, 30, 3000);
 		Pather.makePortal();
-		say("1");
+		say("Izual TP up. Be safe");
 
 		while (!this.playerIn()) {
 			delay(200);
@@ -1235,7 +1340,7 @@ MainLoop:
 
 		Attack.kill(256); // Izual
 		Pickit.pickItems();
-		say("2");
+		say("Don't forget to talk to the angel");
 		Pather.moveToUnit(returnSpot);
 
 		while (this.playerIn()) {
@@ -1310,7 +1415,7 @@ MainLoop:
 		}
 
 		Pather.makePortal();
-		say("1");
+		say("Anya TP up");
 
 		while (!this.playerIn()) {
 			delay(200);
@@ -1320,7 +1425,7 @@ MainLoop:
 			delay(1000);
 		}
 
-		say("2"); // Mainly for non-questers to know when to get the scroll of resistance
+		say("Complete the quest for scroll"); // Mainly for non-questers to know when to get the scroll of resistance
 
 		while (this.playerIn()) {
 			delay(200);
@@ -1336,7 +1441,7 @@ MainLoop:
 	var i, command,
 		current = 0,
 		sequence = [
-			"andariel", "radament", "cube", "amulet", "staff", "summoner", "duriel", "lamesen",
+			"cain", "andariel", "radament", "cube", "amulet", "staff", "summoner", "duriel", "lamesen",
 			"travincal", "mephisto", "izual", "diablo", "shenk", "anya", "ancients", "baal"
 		];
 
